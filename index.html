@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Axel Echevarria — Portafolio</title>
+<meta name="description" content="Portafolio personal — Estudiante de Ingeniería Informática, soporte técnico y desarrollo.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Barra de progreso de scroll -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- NAVBAR -->
+  <header class="navbar" id="navbar">
+    <nav class="nav container">
+      <a href="#inicio" class="logo">A.E<span>.</span></a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#inicio" class="nav-link active">Inicio</a></li>
+        <li><a href="#acerca" class="nav-link">Acerca de mí</a></li>
+        <li><a href="#tecnologias" class="nav-link">Tecnologías</a></li>
+        <li><a href="#helpdesk" class="nav-link">Help Desk</a></li>
+        <li><a href="#contacto" class="nav-link">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section id="inicio" class="hero">
+      <div class="container hero-content">
+        <p class="hero-eyebrow reveal">Bienvenido a mi portafolio</p>
+
+        <div class="hero-photo reveal">
+          <div class="hero-photo-ring">
+            <!--
+              Reemplazá la imagen de abajo por tu foto:
+              agregá tu archivo en assets/foto.jpg (o cambiá el nombre acá).
+              Si no existe, se muestra un placeholder con tus iniciales.
+            -->
+            <img src="assets/foto.jpg" alt="Foto de Axel Echevarria" id="profilePhoto">
+            <div class="hero-photo-fallback" id="photoFallback">AC</div>
+          </div>
+        </div>
+
+        <h1 class="hero-title reveal">Axel Echevarria</h1>
+        <p class="hero-subtitle reveal">
+          Estudiante de Ingeniería Informática (4.º año) · Soporte técnico &amp; Desarrollo
+        </p>
+        <p class="hero-desc reveal">
+          Combino formación avanzada en ingeniería con experiencia práctica en soporte
+          técnico (Help Desk) y desarrollo de software, buscando siempre soluciones
+          prolijas, documentadas y sostenibles en el tiempo.
+        </p>
+
+        <div class="hero-actions reveal">
+          <a href="#contacto" class="btn btn-primary">Contactarme</a>
+          <a href="#acerca" class="btn btn-outline">Conocer más</a>
+        </div>
+      </div>
+
+      <a href="#acerca" class="scroll-cue" aria-label="Desplazarse hacia abajo">
+        <span></span>
+      </a>
+    </section>
+
+    <!-- ACERCA DE MÍ -->
+    <section id="acerca" class="section">
+      <div class="container">
+        <span class="section-tag reveal">Acerca de mí</span>
+        <h2 class="section-title reveal">Un poco sobre mi camino</h2>
+
+        <div class="about-grid">
+          <div class="about-text reveal">
+            <p>
+              Soy estudiante avanzado de <strong>Ingeniería Informática</strong>, actualmente
+              cursando el <strong>4.º año</strong> de la carrera. A lo largo de mi formación
+              desarrollé una base sólida en programación, redes, bases de datos y arquitectura
+              de sistemas, que complemento con experiencia real resolviendo problemas técnicos
+              del día a día.
+            </p>
+            <p>
+              Me interesa particularmente el punto de encuentro entre el <strong>desarrollo
+              de software</strong> y el <strong>soporte técnico (infraestructura)</strong>: entender cómo
+              funciona un sistema de punta a punta me permite no solo construir soluciones,
+              sino también diagnosticar y resolver incidentes de forma eficiente.
+            </p>
+            
+          </div>
+
+          <div class="about-stats reveal">
+            <div class="stat-card">
+              <span class="stat-number" data-count="4">0</span>
+              <span class="stat-label">Año de la carrera</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-number" data-count="10">0</span>
+              <span class="stat-label">+ Tecnologías utilizadas</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-number" data-count="100">0</span>
+              <span class="stat-label">% Compromiso con cada proyecto</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TECNOLOGÍAS -->
+    <section id="tecnologias" class="section section-alt">
+      <div class="container">
+        <span class="section-tag reveal">Habilidades técnicas</span>
+        <h2 class="section-title reveal">Tecnologías que uso</h2>
+        <p class="section-desc reveal">
+          Herramientas y lenguajes con los que trabajo habitualmente en mis estudios
+          y proyectos personales.
+        </p>
+
+        <div class="tech-grid">
+          <div class="tech-card reveal">
+            <div class="tech-icon">&lt;/&gt;</div>
+            <h3>HTML5 &amp; CSS3</h3>
+            <p>Maquetado semántico y estilos responsivos.</p>
+          </div>
+          <div class="tech-card reveal">
+            <div class="tech-icon">JS</div>
+            <h3>JavaScript</h3>
+            <p>Lógica de interfaz y manipulación del DOM.</p>
+          </div>
+          <div class="tech-card reveal">
+            <div class="tech-icon">Py</div>
+            <h3>Python</h3>
+            <p>Scripting, automatización y análisis de datos.</p>
+          </div>
+          <div class="tech-card reveal">
+            <div class="tech-icon">C++</div>
+            <h3>Java</h3>
+            <p>Programación orientada a objetos y estructuras de datos.</p>
+          </div>
+          <div class="tech-card reveal">
+            <div class="tech-icon">DB</div>
+            <h3>SQL</h3>
+            <p>Diseño y consulta de bases de datos relacionales.</p>
+          </div>
+          <div class="tech-card reveal">
+            <div class="tech-icon">Git</div>
+            <h3>Git &amp; GitHub</h3>
+            <p>Control de versiones y trabajo colaborativo.</p>
+          </div>
+          <div class="tech-card reveal">
+            <div class="tech-icon">Nx</div>
+            <h3>Redes</h3>
+            <p>Fundamentos de TCP/IP, configuración y diagnóstico.</p>
+          </div>
+          <div class="tech-card reveal">
+            <div class="tech-icon">Lx</div>
+            <h3>Linux, MacOS &amp; Windows</h3>
+            <p>Administración sistemas operativos. Instalación, optimizacion, detección y solución de problemas.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HELP DESK -->
+    <section id="helpdesk" class="section">
+      <div class="container">
+        <span class="section-tag reveal">Experiencia &amp; soporte</span>
+        <h2 class="section-title reveal">Conocimientos de Help Desk</h2>
+        <p class="section-desc reveal">
+          Experiencia brindando soporte técnico de primer y segundo nivel,
+          con foco en resolver incidentes de forma clara, rápida y documentada.
+        </p>
+
+        <div class="helpdesk-grid">
+          <div class="helpdesk-card reveal">
+            <h3>Soporte Nivel 1 &amp; 2</h3>
+            <p>Diagnóstico y resolución de incidentes de hardware, software y conectividad.</p>
+          </div>
+          <div class="helpdesk-card reveal">
+            <h3>Gestión de tickets</h3>
+            <p>Registro, seguimiento y priorización de incidentes en sistemas de tickets.</p>
+          </div>
+          <div class="helpdesk-card reveal">
+            <h3>Soporte remoto</h3>
+            <p>Asistencia a usuarios mediante herramientas de acceso remoto y control de equipos.</p>
+          </div>
+          <div class="helpdesk-card reveal">
+            <h3>Active Directory</h3>
+            <p>Gestión básica de usuarios, permisos y políticas dentro de un dominio.</p>
+          </div>
+          <div class="helpdesk-card reveal">
+            <h3>Redes &amp; conectividad</h3>
+            <p>Configuración de red local, resolución de problemas de conexión e impresoras.</p>
+          </div>
+          <div class="helpdesk-card reveal">
+            <h3>Atención al usuario</h3>
+            <p>Comunicación clara y profesional para acompañar a usuarios con distinto nivel técnico.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- CONTACTO / REDES SOCIALES -->
+  <footer id="contacto" class="footer">
+    <div class="container">
+      <h2 class="footer-title reveal">Hablemos</h2>
+      <p class="footer-desc reveal">
+        Podés encontrarme en las siguientes redes o escribirme directamente por correo.
+      </p>
+
+      <div class="social-links reveal">
+        <!-- Reemplazá los "#" por tus links reales -->
+        <a href="#" class="social-link" aria-label="LinkedIn" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.24 8.25h4.5V23h-4.5V8.25zM8.13 8.25h4.31v2.02h.06c.6-1.14 2.06-2.34 4.24-2.34 4.53 0 5.36 2.98 5.36 6.86V23h-4.5v-6.77c0-1.62-.03-3.7-2.25-3.7-2.26 0-2.6 1.76-2.6 3.58V23h-4.5V8.25z"/></svg>
+        </a>
+        <a href="#" class="social-link" aria-label="GitHub" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.09 3.29 9.4 7.86 10.93.58.1.79-.25.79-.56 0-.27-.01-1.16-.02-2.11-3.2.7-3.88-1.36-3.88-1.36-.52-1.34-1.28-1.69-1.28-1.69-1.04-.72.08-.7.08-.7 1.15.08 1.76 1.19 1.76 1.19 1.03 1.76 2.69 1.25 3.35.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.7 0-1.26.45-2.29 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.64 1.59.24 2.76.12 3.05.74.8 1.18 1.83 1.18 3.09 0 4.43-2.7 5.4-5.27 5.69.42.36.78 1.08.78 2.18 0 1.57-.01 2.84-.01 3.23 0 .31.21.67.8.56A10.99 10.99 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
+        </a>
+        <a href="#" class="social-link" aria-label="Instagram" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 3.25.15 4.77 1.69 4.92 4.92.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.15 3.23-1.66 4.77-4.92 4.92-1.27.06-1.64.07-4.85.07s-3.58-.01-4.85-.07c-3.26-.15-4.77-1.7-4.92-4.92-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85C2.38 3.9 3.9 2.38 7.15 2.23 8.42 2.17 8.8 2.16 12 2.16zm0-2.16C8.74 0 8.33.01 7.05.07 2.7.27.27 2.7.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.2 4.35 2.63 6.78 6.98 6.98 1.28.06 1.69.07 4.95.07s3.67-.01 4.95-.07c4.34-.2 6.78-2.63 6.98-6.98.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95C23.72 2.7 21.3.27 16.95.07 15.67.01 15.26 0 12 0zm0 5.84A6.16 6.16 0 1 0 18.16 12 6.16 6.16 0 0 0 12 5.84zm0 10.16A4 4 0 1 1 16 12a4 4 0 0 1-4 4zm6.4-10.4a1.44 1.44 0 1 1-1.44-1.44 1.44 1.44 0 0 1 1.44 1.44z"/></svg>
+        </a>
+        <a href="mailto:tu-correo@ejemplo.com" class="social-link" aria-label="Correo electrónico">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M2 4h20a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1zm19.4 2.6L12 12.5 2.6 6.6 2 7.7l10 6.2 10-6.2z"/></svg>
+        </a>
+      </div>
+
+      <p class="footer-bottom reveal">&copy; <span id="year"></span> Axel Echevarria · Hecho con HTML, CSS &amp; JavaScript.</p>
+    </div>
+  </footer>
+
+  <button class="to-top" id="toTop" aria-label="Volver arriba">↑</button>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
