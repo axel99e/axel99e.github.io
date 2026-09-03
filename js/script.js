@@ -137,4 +137,47 @@ document.addEventListener('DOMContentLoaded', () => {
 
   statNumbers.forEach(el => statObserver.observe(el));
 
+  /* ---------------------------------------------------------
+     Formulario de contacto (Web3Forms, sin backend propio)
+  --------------------------------------------------------- */
+  const contactForm = document.getElementById('contactForm');
+  const formStatus = document.getElementById('formStatus');
+
+  if (contactForm) {
+    contactForm.addEventListener('submit', async (event) => {
+      event.preventDefault();
+
+      const submitBtn = contactForm.querySelector('.form-submit');
+      const formData = new FormData(contactForm);
+
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Enviando...';
+      formStatus.textContent = '';
+      formStatus.classList.remove('success', 'error');
+
+      try {
+        const response = await fetch(contactForm.action, {
+          method: 'POST',
+          headers: { Accept: 'application/json' },
+          body: formData
+        });
+        const result = await response.json();
+
+        if (response.ok && result.success) {
+          formStatus.textContent = '¡Mensaje enviado! Te voy a responder a la brevedad.';
+          formStatus.classList.add('success');
+          contactForm.reset();
+        } else {
+          throw new Error(result.message || 'No se pudo enviar el mensaje.');
+        }
+      } catch (err) {
+        formStatus.textContent = 'Hubo un error al enviar el mensaje. Probá de nuevo o escribime directo por mail.';
+        formStatus.classList.add('error');
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Enviar mensaje';
+      }
+    });
+  }
+
 });
