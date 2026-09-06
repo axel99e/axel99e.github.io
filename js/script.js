@@ -138,6 +138,46 @@ document.addEventListener('DOMContentLoaded', () => {
   statNumbers.forEach(el => statObserver.observe(el));
 
   /* ---------------------------------------------------------
+     Galería de proyectos: miniaturas + lightbox
+  --------------------------------------------------------- */
+  document.querySelectorAll('.project-card').forEach(card => {
+    const mainImg = card.querySelector('.project-gallery-main img');
+    const thumbs = card.querySelectorAll('.gallery-thumb');
+
+    thumbs.forEach(thumb => {
+      thumb.addEventListener('click', () => {
+        thumbs.forEach(t => t.classList.remove('active'));
+        thumb.classList.add('active');
+        mainImg.src = thumb.dataset.full;
+        mainImg.alt = thumb.dataset.alt || mainImg.alt;
+      });
+    });
+  });
+
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightboxImg');
+
+  if (lightbox && lightboxImg) {
+    document.querySelectorAll('.project-gallery-main img').forEach(img => {
+      img.addEventListener('click', () => {
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt;
+        lightbox.classList.add('open');
+      });
+    });
+
+    const closeLightbox = () => {
+      lightbox.classList.remove('open');
+      lightboxImg.src = '';
+    };
+
+    lightbox.addEventListener('click', closeLightbox);
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') closeLightbox();
+    });
+  }
+
+  /* ---------------------------------------------------------
      Formulario de contacto (Web3Forms, sin backend propio)
   --------------------------------------------------------- */
   const contactForm = document.getElementById('contactForm');
